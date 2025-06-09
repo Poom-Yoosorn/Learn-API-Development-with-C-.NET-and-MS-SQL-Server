@@ -1,3 +1,6 @@
+USE master
+DROP DATABASE DotNetCourseDatabase
+
 CREATE DATABASE DotNetCourseDatabase;
 GO
 
