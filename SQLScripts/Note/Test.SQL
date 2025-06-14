@@ -1,6 +1,21 @@
 USE DotNetCourseDatabase
 GO
 
+SELECT [UserId],
+[FirstName],
+[LastName],
+[Email],
+[Gender],
+[Active] FROM TutorialAppSchema.Users
+
+SELECT [UserId],
+[JobTitle],
+[Department] FROM TutorialAppSchema.UserJobInfo
+
+SELECT [UserId],
+[Salary] FROM TutorialAppSchema.UserSalary
+
+
 SELECT  Users.UserId
         , Users.FirstName + ' ' + Users.LastName AS FullName
         , Users.Email
