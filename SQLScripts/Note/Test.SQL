@@ -1,12 +1,14 @@
 USE DotNetCourseDatabase
 GO
 
-SELECT [UserId],
-[FirstName],
-[LastName],
-[Email],
-[Gender],
-[Active] FROM TutorialAppSchema.Users
+SELECT 
+    [UserId],
+    [FirstName],
+    [LastName],
+    [Email],
+    [Gender],
+    [Active] 
+FROM TutorialAppSchema.Users
 
 SELECT [UserId],
 [JobTitle],
@@ -14,6 +16,41 @@ SELECT [UserId],
 
 SELECT [UserId],
 [Salary] FROM TutorialAppSchema.UserSalary
+
+
+
+INSERT INTO TutorialAppSchema.Users
+(
+    [FirstName],
+    [LastName],
+    [Email],
+    [Gender],
+    [Active] 
+)
+VALUES
+(
+    'TestUser',
+    'TestUser',
+    'TestUser.gmail.com',
+    'male',
+    'true'
+)
+
+
+UPDATE TutorialAppSchema.Users
+    SET
+        [FirstName] = 'Albertina',
+        [LastName] = 'O''Finan',
+        [Email] = 'aofinan0@blogspot.com',
+        [Gender] = 'Female',
+        [Active] = 1
+    WHERE UserId = 1
+
+
+DELETE FROM TutorialAppSchema.Users WHERE UserId = 1002;
+
+
+
 
 
 SELECT  Users.UserId
