@@ -8,7 +8,8 @@ SELECT
     [Email],
     [Gender],
     [Active] 
-FROM TutorialAppSchema.Users
+FROM TutorialAppSchema.Users 
+ORDER BY UserId DESC
 
 SELECT [UserId],
 [JobTitle],
