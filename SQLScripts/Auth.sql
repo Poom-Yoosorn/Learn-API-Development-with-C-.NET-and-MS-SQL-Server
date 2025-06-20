@@ -5,3 +5,11 @@ CREATE TABLE TutorialAppSchema.Auth(
 	PasswordHash VARBINARY(MAX),
 	PasswordSalt VARBINARY(MAX)
 )
+
+
+SELECT * FROM TutorialAppSchema.Auth WHERE Email = ''
+SELECT * FROM TutorialAppSchema.Users WHERE FirstName = 'Test2'
+
+INSERT INTO TutorialAppSchema.Auth  
+([Email],[PasswordHash],[PasswordSalt]) 
+VALUES ('userForRegistration.Email', @PasswordHash, @PasswordSalt)
